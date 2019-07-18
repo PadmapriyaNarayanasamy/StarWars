@@ -1,0 +1,150 @@
+<div class='heading'>
+    <h2> StarWars </h2>
+    <button (click)="goBack()">Go Back</button>
+    <input type="image" src="../src/images/backButton.jpg" alt="Back" (click)="goBack()" >
+  </div>
+  <div *ngIf=itemDetails>
+      <img src=""/>
+    <p>{{itemDetails.name}}</p>
+    <p>Birth Year:{{itemDetails.birth_year}}</p>
+   <div *ngFor="let species of speciesDetails">
+<p>Species:{{species.name}}</p>
+</div>
+<p>Height:{{itemDetails.height}}</p>
+<p>Mass:{{itemDetails.mass}}</p>
+<p>Gender: {{itemDetails.gender}}</p>
+<p>Hair Color: {{itemDetails.hair_color}}</p>
+<p>Skin Color: {{itemDetails.skin_color}}</p>
+<p>HomeWorld: {{homeCountryObj.name}}</p>
+<p></p>
+          </div>
+  <div *ngIf=filmDetails>
+    <img src=""/>
+    <p>{{filmDetails.title}}</p>
+    <p>Episode ID: {{filmDetails.episode_id}}</p>
+    <p>Opening Crawl: {{filmDetails.opening_crawl}}</p>
+    <p>Director: {{filmDetails.director}}</p>
+    <p>Producer: {{filmDetails.producer}}</p>
+    <p>Release Date: {{filmDetails.release_date}}}</p>
+    <p> Characters:</p>
+    <div *ngFor="let character of characterDetails">
+    {{character.name}}
+    </div>
+<p>Planets:</p>
+<div *ngFor="let planet of planetsDetails">
+  {{planet.name}}
+</div>
+<p>StarShips:</p>
+<div *ngFor="let starShip of starShipsDetails">
+  {{starShip.name}}
+</div>
+
+<p>Vehicles:</p>
+<div *ngFor="let vehicle of vehiclesDetails">
+  {{vehicle.name}}
+
+</div>
+<p>Species:</p>
+<div *ngFor="let species of speciesDetails">
+  {{species.name}}
+</div>
+<p>Created: {{filmDetails.created}}</p>
+<p>Edited: {{filmDetails.edited}}</p>
+  </div>
+
+  <div *ngIf="spciesssDetails">
+      <img src=""/>
+      <p>{{spciesssDetails.name}}</p>
+      <p>Classification: {{spciesssDetails.classification}}</p>
+      <p>Designation: {{spciesssDetails.designation}}</p>
+      <p>Average Height: {{spciesssDetails.average_height}}</p>
+      <p>Skin Colors: {{spciesssDetails.skin_colors}}</p>
+      <p>Hair Colors: {{spciesssDetails.hair_colors}}</p>
+      <p>Eye Colors: {{spciesssDetails.eye_colors}}</p>
+      <p>Average LifeSpan: {{spciesssDetails.average_lifespan}}</p>
+      <p>HomeWorld: {{spciesssDetails.homeworld}}</p>
+      <p>Language: {{spciesssDetails.language}}</p>
+      <p>People </p>
+      <div *ngFor="let people of characterDetails">
+        {{people.name}}
+      </div>
+      <p>Films</p>
+      <div *ngFor="let film of filmsDetails">
+        {{film.title}}
+      </div>
+      <p>Created: {{spciesssDetails.created}}</p>
+      <p>Edited: {{spciesssDetails.edited}}</p>
+  </div>
+
+  <div *ngIf="starShipsssDetails">
+      <img src=""/>
+     <p> {{starShipsssDetails.name}}</p>
+     <p>Model: {{starShipsssDetails.model}}</p>
+      <p>Manufacturer: {{starShipsssDetails.manufacturer}}</p>
+      <p>Cost in Credits: {{starShipsssDetails.cost_in_credits}}</p>
+      <p>Length: {{starShipsssDetails.length}}</p>
+      <p>Max Atmosphering Speed: {{starShipsssDetails.max_atmosphering_speed}}</p>
+      <p>Crew: {{starShipsssDetails.crew}}</p>
+      <p>Passengers: {{starShipsssDetails.passengers}}</p>
+      <p>Cargo Capacity: {{starShipsssDetails.cargo_capacity}}</p>
+      <p>Consumables: {{starShipsssDetails.consumables}}</p>
+      <p>Hyperdrive Rating: {{starShipsssDetails.hyperdrive_rating}}</p>
+      <p>MGLT: {{starShipsssDetails.MGLT}}</p>
+      <p>Starship Class: {{starShipsssDetails.starship_class}}</p>
+      <p>Pilots: </p>
+      <div *ngFor="let pilot of characterDetails"> 
+        {{pilot.name}}
+      </div>
+      <p>Fillms:</p>
+      <div *ngFor="let film of filmsDetails">
+        {{film.title}}
+      </div>
+      <p>Created: {{starShipsssDetails.created}}</p>
+      <p>Edited: {{starShipsssDetails.edited}}</p>
+  </div>
+  <div *ngIf="vehiclesssDetails">
+<p>{{vehiclesssDetails.name}}</p>
+<p>Model: {{vehiclesssDetails.model}}</p>
+<p>Manufacturer: {{vehiclesssDetails.manufacturer}}</p>
+<p>Cost in Credits: {{vehiclesssDetails.cost_in_credits}}</p>
+<p>Length: {{vehiclesssDetails.length}}</p>
+<p>Max Atmosphering Speed: {{vehiclesssDetails.max_atmosphering_speed}}</p>
+<p>Crew: {{vehiclesssDetails.crew}}</p>
+<p>Passengers: {{vehiclesssDetails.passengers}}</p>
+<p>Cargo Capacity: {{vehiclesssDetails.cargo_capacity}}</p>
+<p>Consumables: {{vehiclesssDetails.consumables}}</p>
+<p>Vehicle Class: {{vehiclesssDetails.vehicle_class}}</p>
+<p>Pilots:</p>
+<div *ngFor="let pilot of characterDetails">
+  {{pilot.name}}
+
+</div>
+<p>Films:</p>
+<div *ngFor="let film of filmsDetails">
+  {{film.title}}
+</div>
+<p>Created: {{vehiclesssDetails.created}}</p>
+<p>Edited: {{vehiclesssDetails.edited}}</p>
+  </div>
+
+<div *ngIf="planetsssDetails">
+  {{planetsssDetails.name}}
+  <p>Rotation Period: {{planetsssDetails.rotation_period}}</p>
+  <p>Orbital Period: {{planetsssDetails.orbital_period}}</p>
+  <p>Diameter: {{planetsssDetails.diameter}}</p>
+  <p>Climate: {{planetsssDetails.climate}}</p>
+  <p>Gravity: {{planetsssDetails.gravity}}</p>
+  <p>Terrain: {{planetsssDetails.terrain}}</p>
+  <p>Surface Water: {{planetsssDetails.surface_water}}</p>
+  <p>Population: {{planetsssDetails.population}}</p>
+  <p>Residents</p>
+  <div *ngFor="let resident of characterDetails">
+    {{resident.name}}
+  </div>
+  <p>Films</p>
+  <div *ngFor="let film of filmsDetails">
+    {{film.title}}
+  </div>
+  <p>Created: {{planetsssDetails.created}}</p>
+  <p>Edited: {{planetsssDetails.edited}}</p>
+</div>

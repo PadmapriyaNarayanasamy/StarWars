@@ -1,0 +1,22 @@
+<div class='heading'>
+    <h2> StarWars </h2>
+  </div>
+  
+  <div>
+   <ul *ngIf="detailsList" >
+     <li>
+     <p>{{selectedType}}</p></li>
+      <li *ngFor="let detail of detailsList.results;let i=index">   
+               <a [routerLink]="['/items']" [queryParams]="{id:i+1}">{{detail.name}}</a>         
+      </li>
+    </ul>
+
+    <ul *ngIf="filmList">
+      <li>
+          <p>{{selectedType}}</p></li>
+          <li *ngFor="let film of filmList.results;let i=index">   
+                   <a [routerLink]="['/items']" [queryParams]="{id:i+1}">{{film.title}}</a>   
+     
+      </li>
+    </ul>
+      </div>
